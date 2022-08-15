@@ -4,10 +4,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 &inc_dec_kp {
-	triggers-per-rotation = <4>;
+	triggers-per-rotation = <16>;
 };
 &def_lshft {
-	triggers-per-rotation = <4>;
+	triggers-per-rotation = <16>;
 };
 
 / {
@@ -31,7 +31,8 @@
 		};
 		three {
 			//PREV | PLAY/PAUSE | NEXT
-			bindings = <&kp C_MUTE &lt 4 F13 &kp C_PP>;
+			bindings = <&kp C_PREV &lt 4 C_PP &kp C_NEXT>;
+			sendor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
 		};
 		shift {
 			//PREV | PLAY/PAUSE | NEXT
